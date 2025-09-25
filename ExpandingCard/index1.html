@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Expanding cards</title>
+ </head>
+<body>
+   <div class="container">
+    <div class="panel active" style=" background:url(Image/1.jpg)">
+        <h3>Pablo Escobar</h3>
+    </div>
+
+    <div class="panel" style=" background: url(Image/2.jpg)">
+        <h3>Tupac Shakur</h3>
+    </div>
+
+    <div class="panel" style=" background: url(Image/3.jpg)">
+        <h3>Bob Marley</h3>
+    </div>
+
+    <div class="panel" style=" background: url(Image/4.jpg)">
+        <h3>2pac Amaru </h3>
+    </div>
+
+    <div class="panel" style=" background: url(Image/5.jpg)">
+        <h3>Fela Kuti</h3>
+    </div>
+
+    <div class="panel" style=" background: url(Image/6.jpg)">
+        <h3>Elite Academy</h3>
+    </div>
+   </div>
+   <script>
+         
+      // selecting all sections with class of section
+      const panels = document.querySelectorAll(".panel");
+  
+      // Foreach section when clicked
+      panels.forEach(panel => {
+        panel.addEventListener('click', () => {
+            
+          // remove active class from all another section and
+          // add it to the selected section
+          panels.forEach((panel) => {
+            panel.classList.remove('active');
+          });
+          panel.classList.add('active');
+        });
+      });
+    
+   
+   </script>
+   
+ </body>
+</html>

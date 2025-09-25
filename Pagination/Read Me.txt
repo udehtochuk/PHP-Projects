@@ -1,0 +1,3 @@
+Important:
+Create Database
+then import the attached pagination_table.sql file
